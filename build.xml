@@ -40,6 +40,7 @@
   <target name="jar-with-deps" depends="compile">
     <antcall target="jar" />
     <jar jarfile="${dist_lib.dir}/sfntly-with-dependencies.jar">
+      <zipgroupfileset dir="${dist_lib.dir}" includes="sfntly.jar" />
       <zipgroupfileset dir="${lib.dir}" includes="*.jar" />
     </jar>
   </target>
